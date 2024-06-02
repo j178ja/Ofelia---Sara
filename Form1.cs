@@ -148,5 +148,15 @@ namespace practica
         {
 
         }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void EnviarImprimir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

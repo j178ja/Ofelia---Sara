@@ -38,35 +38,35 @@
             instructor = new Label();
             secretario = new Label();
             fecha = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
+            dato_CARATULA = new TextBox();
+            dato_DENUNCIANTE = new TextBox();
+            dato_IMPUTADO = new TextBox();
+            btn_agregar_UFID = new Button();
+            btn_agregar_INSTRUCTOR = new Button();
+            btn_agregar_SECRETARIO = new Button();
+            dato_MES = new ComboBox();
+            dato_AÑO = new ComboBox();
             label9 = new Label();
             label10 = new Label();
-            comboBox4 = new ComboBox();
-            comboBox5 = new ComboBox();
-            comboBox7 = new ComboBox();
+            dato1_IPP = new ComboBox();
+            dato2_IPP = new ComboBox();
+            dato4_año_IPP = new ComboBox();
             label11 = new Label();
             label12 = new Label();
             label13 = new Label();
             label14 = new Label();
-            comboBox6 = new ComboBox();
-            comboBox8 = new ComboBox();
-            comboBox9 = new ComboBox();
+            dato_UFID = new ComboBox();
+            dato_INSTRUCTOR = new ComboBox();
+            dato_SECRETARIO = new ComboBox();
             dependencia = new Label();
-            comboBox10 = new ComboBox();
+            dato_DEPENDENCIA = new ComboBox();
             label16 = new Label();
-            comboBox11 = new ComboBox();
-            numericUpDown1 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
-            button7 = new Button();
-            BotonCambioTema = new PictureBox();
-            BotonConfiguracion = new PictureBox();
+            dato_DR = new ComboBox();
+            dato_DIA = new NumericUpDown();
+            dato3_numero_IPP = new NumericUpDown();
+            btn_agregar_DR = new Button();
+            btn_cambio_TEMA = new PictureBox();
+            btn_CONFIGURACION = new PictureBox();
             EnviarImprimir = new PictureBox();
             LimpiarContenido = new PictureBox();
             GuardarArchivo = new PictureBox();
@@ -77,13 +77,22 @@
             GUADAR = new ToolTip(components);
             LIMPIAR = new ToolTip(components);
             IMPRIMIR = new ToolTip(components);
-            button2 = new Button();
-            button1 = new Button();
-            button6 = new Button();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)BotonCambioTema).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)BotonConfiguracion).BeginInit();
+            btn_agregar_IMPUTADO = new Button();
+            btn_agregar_DENUNCIANTE = new Button();
+            btn_agregar_CARATULA = new Button();
+            btn_agregar_DEPENDENCIA = new Button();
+            agr_caratula = new ToolTip(components);
+            agr_secretario = new ToolTip(components);
+            agr_denunciante = new ToolTip(components);
+            agr_ufid = new ToolTip(components);
+            agr_instructor = new ToolTip(components);
+            agr_dr = new ToolTip(components);
+            agr_dependencia = new ToolTip(components);
+            agr_imputado = new ToolTip(components);
+            ((System.ComponentModel.ISupportInitialize)dato_DIA).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dato3_numero_IPP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btn_cambio_TEMA).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btn_CONFIGURACION).BeginInit();
             ((System.ComponentModel.ISupportInitialize)EnviarImprimir).BeginInit();
             ((System.ComponentModel.ISupportInitialize)LimpiarContenido).BeginInit();
             ((System.ComponentModel.ISupportInitialize)GuardarArchivo).BeginInit();
@@ -162,81 +171,84 @@
             fecha.TabIndex = 9;
             fecha.Text = "FECHA";
             // 
-            // textBox2
+            // dato_CARATULA
             // 
-            textBox2.Location = new Point(134, 93);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Ej. HURTO";
-            textBox2.Size = new Size(267, 23);
-            textBox2.TabIndex = 11;
-            textBox2.TextChanged += textBox2_TextChanged;
+            dato_CARATULA.Location = new Point(134, 93);
+            dato_CARATULA.Name = "dato_CARATULA";
+            dato_CARATULA.PlaceholderText = "Ej. HURTO";
+            dato_CARATULA.Size = new Size(267, 23);
+            dato_CARATULA.TabIndex = 11;
+            dato_CARATULA.TextChanged += textBox2_TextChanged;
             // 
-            // textBox3
+            // dato_DENUNCIANTE
             // 
-            textBox3.Location = new Point(134, 129);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(267, 23);
-            textBox3.TabIndex = 12;
+            dato_DENUNCIANTE.Location = new Point(134, 129);
+            dato_DENUNCIANTE.Name = "dato_DENUNCIANTE";
+            dato_DENUNCIANTE.Size = new Size(267, 23);
+            dato_DENUNCIANTE.TabIndex = 12;
             // 
-            // textBox4
+            // dato_IMPUTADO
             // 
-            textBox4.Location = new Point(134, 165);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(267, 23);
-            textBox4.TabIndex = 13;
+            dato_IMPUTADO.Location = new Point(134, 165);
+            dato_IMPUTADO.Name = "dato_IMPUTADO";
+            dato_IMPUTADO.Size = new Size(267, 23);
+            dato_IMPUTADO.TabIndex = 13;
             // 
-            // button3
+            // btn_agregar_UFID
             // 
-            button3.BackColor = SystemColors.ControlLight;
-            button3.Location = new Point(134, 202);
-            button3.Name = "button3";
-            button3.Size = new Size(18, 23);
-            button3.TabIndex = 21;
-            button3.Text = "+";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            btn_agregar_UFID.BackColor = SystemColors.ControlLight;
+            btn_agregar_UFID.Location = new Point(134, 202);
+            btn_agregar_UFID.Name = "btn_agregar_UFID";
+            btn_agregar_UFID.Size = new Size(18, 23);
+            btn_agregar_UFID.TabIndex = 21;
+            btn_agregar_UFID.Text = "+";
+            agr_ufid.SetToolTip(btn_agregar_UFID, "Agregar Nueva UFID");
+            btn_agregar_UFID.UseVisualStyleBackColor = false;
+            btn_agregar_UFID.Click += button3_Click;
             // 
-            // button4
+            // btn_agregar_INSTRUCTOR
             // 
-            button4.BackColor = SystemColors.ControlLight;
-            button4.Cursor = Cursors.Hand;
-            button4.Location = new Point(134, 238);
-            button4.Name = "button4";
-            button4.Size = new Size(18, 23);
-            button4.TabIndex = 22;
-            button4.Text = "+";
-            button4.UseVisualStyleBackColor = false;
+            btn_agregar_INSTRUCTOR.BackColor = SystemColors.ControlLight;
+            btn_agregar_INSTRUCTOR.Cursor = Cursors.Hand;
+            btn_agregar_INSTRUCTOR.Location = new Point(134, 238);
+            btn_agregar_INSTRUCTOR.Name = "btn_agregar_INSTRUCTOR";
+            btn_agregar_INSTRUCTOR.Size = new Size(18, 23);
+            btn_agregar_INSTRUCTOR.TabIndex = 22;
+            btn_agregar_INSTRUCTOR.Text = "+";
+            agr_instructor.SetToolTip(btn_agregar_INSTRUCTOR, "Agregar Nuevo Instructor");
+            btn_agregar_INSTRUCTOR.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btn_agregar_SECRETARIO
             // 
-            button5.BackColor = SystemColors.ControlLight;
-            button5.Cursor = Cursors.Hand;
-            button5.Location = new Point(134, 277);
-            button5.Name = "button5";
-            button5.Size = new Size(18, 23);
-            button5.TabIndex = 23;
-            button5.Text = "+";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
+            btn_agregar_SECRETARIO.BackColor = SystemColors.ControlLight;
+            btn_agregar_SECRETARIO.Cursor = Cursors.Hand;
+            btn_agregar_SECRETARIO.Location = new Point(134, 277);
+            btn_agregar_SECRETARIO.Name = "btn_agregar_SECRETARIO";
+            btn_agregar_SECRETARIO.Size = new Size(18, 23);
+            btn_agregar_SECRETARIO.TabIndex = 23;
+            btn_agregar_SECRETARIO.Text = "+";
+            agr_secretario.SetToolTip(btn_agregar_SECRETARIO, "Agregar Nuevo Secretario");
+            btn_agregar_SECRETARIO.UseVisualStyleBackColor = false;
+            btn_agregar_SECRETARIO.Click += button5_Click;
             // 
-            // comboBox2
+            // dato_MES
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO ", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE" });
-            comboBox2.Location = new Point(220, 351);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(87, 23);
-            comboBox2.TabIndex = 28;
+            dato_MES.FormattingEnabled = true;
+            dato_MES.Items.AddRange(new object[] { "ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO ", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE" });
+            dato_MES.Location = new Point(220, 351);
+            dato_MES.Name = "dato_MES";
+            dato_MES.Size = new Size(87, 23);
+            dato_MES.TabIndex = 28;
             // 
-            // comboBox3
+            // dato_AÑO
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "2024", "2025", "2026" });
-            comboBox3.Location = new Point(340, 351);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(76, 23);
-            comboBox3.TabIndex = 29;
-            comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
+            dato_AÑO.FormattingEnabled = true;
+            dato_AÑO.Items.AddRange(new object[] { "2024", "2025", "2026" });
+            dato_AÑO.Location = new Point(340, 351);
+            dato_AÑO.Name = "dato_AÑO";
+            dato_AÑO.Size = new Size(76, 23);
+            dato_AÑO.TabIndex = 29;
+            dato_AÑO.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             // 
             // label9
             // 
@@ -256,32 +268,32 @@
             label10.TabIndex = 31;
             label10.Text = "DE";
             // 
-            // comboBox4
+            // dato1_IPP
             // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Items.AddRange(new object[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10" });
-            comboBox4.Location = new Point(134, 57);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(44, 23);
-            comboBox4.TabIndex = 32;
+            dato1_IPP.FormattingEnabled = true;
+            dato1_IPP.Items.AddRange(new object[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10" });
+            dato1_IPP.Location = new Point(134, 57);
+            dato1_IPP.Name = "dato1_IPP";
+            dato1_IPP.Size = new Size(44, 23);
+            dato1_IPP.TabIndex = 32;
             // 
-            // comboBox5
+            // dato2_IPP
             // 
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Items.AddRange(new object[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10" });
-            comboBox5.Location = new Point(193, 57);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(44, 23);
-            comboBox5.TabIndex = 33;
+            dato2_IPP.FormattingEnabled = true;
+            dato2_IPP.Items.AddRange(new object[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10" });
+            dato2_IPP.Location = new Point(193, 57);
+            dato2_IPP.Name = "dato2_IPP";
+            dato2_IPP.Size = new Size(44, 23);
+            dato2_IPP.TabIndex = 33;
             // 
-            // comboBox7
+            // dato4_año_IPP
             // 
-            comboBox7.FormattingEnabled = true;
-            comboBox7.Items.AddRange(new object[] { "24", "25", "26" });
-            comboBox7.Location = new Point(352, 57);
-            comboBox7.Name = "comboBox7";
-            comboBox7.Size = new Size(40, 23);
-            comboBox7.TabIndex = 35;
+            dato4_año_IPP.FormattingEnabled = true;
+            dato4_año_IPP.Items.AddRange(new object[] { "24", "25", "26" });
+            dato4_año_IPP.Location = new Point(352, 57);
+            dato4_año_IPP.Name = "dato4_año_IPP";
+            dato4_año_IPP.Size = new Size(40, 23);
+            dato4_año_IPP.TabIndex = 35;
             // 
             // label11
             // 
@@ -295,7 +307,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(243, 60);
+            label12.Location = new Point(240, 60);
             label12.Name = "label12";
             label12.Size = new Size(12, 15);
             label12.TabIndex = 37;
@@ -321,32 +333,32 @@
             label14.TabIndex = 39;
             label14.Text = "/00";
             // 
-            // comboBox6
+            // dato_UFID
             // 
-            comboBox6.FormattingEnabled = true;
-            comboBox6.Items.AddRange(new object[] { "04", "05", "06", "08", "FRPJ N°1", "FRPJ N°2" });
-            comboBox6.Location = new Point(147, 202);
-            comboBox6.Name = "comboBox6";
-            comboBox6.Size = new Size(76, 23);
-            comboBox6.TabIndex = 43;
+            dato_UFID.FormattingEnabled = true;
+            dato_UFID.Items.AddRange(new object[] { "04", "05", "06", "08", "FRPJ N°1", "FRPJ N°2" });
+            dato_UFID.Location = new Point(147, 202);
+            dato_UFID.Name = "dato_UFID";
+            dato_UFID.Size = new Size(76, 23);
+            dato_UFID.TabIndex = 43;
             // 
-            // comboBox8
+            // dato_INSTRUCTOR
             // 
-            comboBox8.FormattingEnabled = true;
-            comboBox8.Items.AddRange(new object[] { "COMISARIO  MIGUEL MORENO", "SUBCOMISARIO MELISA PEREA PEÑA" });
-            comboBox8.Location = new Point(147, 238);
-            comboBox8.Name = "comboBox8";
-            comboBox8.Size = new Size(269, 23);
-            comboBox8.TabIndex = 44;
+            dato_INSTRUCTOR.FormattingEnabled = true;
+            dato_INSTRUCTOR.Items.AddRange(new object[] { "COMISARIO  MIGUEL MORENO", "SUBCOMISARIO MELISA PEREA PEÑA" });
+            dato_INSTRUCTOR.Location = new Point(147, 238);
+            dato_INSTRUCTOR.Name = "dato_INSTRUCTOR";
+            dato_INSTRUCTOR.Size = new Size(269, 23);
+            dato_INSTRUCTOR.TabIndex = 44;
             // 
-            // comboBox9
+            // dato_SECRETARIO
             // 
-            comboBox9.FormattingEnabled = true;
-            comboBox9.Items.AddRange(new object[] { "OFICIAL AYUDANTE JORGE BONATO", "OFICIAL AYUDANTE ARIEL VAZQUEZ", "OFICIAL SUBINSPECTOR MARTIN ALI BONATO", "SARGENTO NEREA SANDOVAL" });
-            comboBox9.Location = new Point(147, 277);
-            comboBox9.Name = "comboBox9";
-            comboBox9.Size = new Size(269, 23);
-            comboBox9.TabIndex = 45;
+            dato_SECRETARIO.FormattingEnabled = true;
+            dato_SECRETARIO.Items.AddRange(new object[] { "OFICIAL AYUDANTE JORGE BONATO", "OFICIAL AYUDANTE ARIEL VAZQUEZ", "OFICIAL SUBINSPECTOR MARTIN ALI BONATO", "SARGENTO NEREA SANDOVAL" });
+            dato_SECRETARIO.Location = new Point(147, 277);
+            dato_SECRETARIO.Name = "dato_SECRETARIO";
+            dato_SECRETARIO.Size = new Size(269, 23);
+            dato_SECRETARIO.TabIndex = 45;
             // 
             // dependencia
             // 
@@ -358,14 +370,14 @@
             dependencia.Text = "DEPENDENCIA";
             dependencia.Click += label15_Click;
             // 
-            // comboBox10
+            // dato_DEPENDENCIA
             // 
-            comboBox10.FormattingEnabled = true;
-            comboBox10.Items.AddRange(new object[] { "EPC I PINAMAR", "EPC II OSTENDE", "EPC III VALERIA DEL MAR", "EPC IV CARILO" });
-            comboBox10.Location = new Point(134, 317);
-            comboBox10.Name = "comboBox10";
-            comboBox10.Size = new Size(282, 23);
-            comboBox10.TabIndex = 47;
+            dato_DEPENDENCIA.FormattingEnabled = true;
+            dato_DEPENDENCIA.Items.AddRange(new object[] { "EPC I PINAMAR", "EPC II OSTENDE", "EPC III VALERIA DEL MAR", "EPC IV CARILO" });
+            dato_DEPENDENCIA.Location = new Point(147, 317);
+            dato_DEPENDENCIA.Name = "dato_DEPENDENCIA";
+            dato_DEPENDENCIA.Size = new Size(269, 23);
+            dato_DEPENDENCIA.TabIndex = 47;
             // 
             // label16
             // 
@@ -376,65 +388,68 @@
             label16.TabIndex = 48;
             label16.Text = "Dr/a.";
             // 
-            // comboBox11
+            // dato_DR
             // 
-            comboBox11.FormattingEnabled = true;
-            comboBox11.Items.AddRange(new object[] { "PABLO CALDERON", "WALER MERCURI", "VERONICA ZAMBONI" });
-            comboBox11.Location = new Point(286, 202);
-            comboBox11.Name = "comboBox11";
-            comboBox11.Size = new Size(130, 23);
-            comboBox11.TabIndex = 51;
+            dato_DR.FormattingEnabled = true;
+            dato_DR.Items.AddRange(new object[] { "PABLO CALDERON", "WALER MERCURI", "VERONICA ZAMBONI" });
+            dato_DR.Location = new Point(284, 202);
+            dato_DR.Name = "dato_DR";
+            dato_DR.Size = new Size(132, 23);
+            dato_DR.TabIndex = 51;
             // 
-            // numericUpDown1
+            // dato_DIA
             // 
-            numericUpDown1.Location = new Point(134, 351);
-            numericUpDown1.Maximum = new decimal(new int[] { 31, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(59, 23);
-            numericUpDown1.TabIndex = 52;
-            numericUpDown1.TextAlign = HorizontalAlignment.Center;
-            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
+            dato_DIA.Location = new Point(134, 351);
+            dato_DIA.Maximum = new decimal(new int[] { 31, 0, 0, 0 });
+            dato_DIA.Name = "dato_DIA";
+            dato_DIA.Size = new Size(59, 23);
+            dato_DIA.TabIndex = 52;
+            dato_DIA.TextAlign = HorizontalAlignment.Center;
+            dato_DIA.ValueChanged += numericUpDown1_ValueChanged;
             // 
-            // numericUpDown2
+            // dato3_numero_IPP
             // 
-            numericUpDown2.Location = new Point(251, 56);
-            numericUpDown2.Maximum = new decimal(new int[] { 999999, 0, 0, 0 });
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(86, 23);
-            numericUpDown2.TabIndex = 53;
-            numericUpDown2.TextAlign = HorizontalAlignment.Center;
+            dato3_numero_IPP.Location = new Point(251, 56);
+            dato3_numero_IPP.Maximum = new decimal(new int[] { 999999, 0, 0, 0 });
+            dato3_numero_IPP.Name = "dato3_numero_IPP";
+            dato3_numero_IPP.Size = new Size(86, 23);
+            dato3_numero_IPP.TabIndex = 53;
+            dato3_numero_IPP.TextAlign = HorizontalAlignment.Center;
             // 
-            // button7
+            // btn_agregar_DR
             // 
-            button7.BackColor = SystemColors.ControlLight;
-            button7.Location = new Point(271, 201);
-            button7.Name = "button7";
-            button7.Size = new Size(17, 25);
-            button7.TabIndex = 54;
-            button7.Text = "+";
-            button7.UseVisualStyleBackColor = false;
+            btn_agregar_DR.BackColor = SystemColors.ControlLight;
+            btn_agregar_DR.Location = new Point(271, 201);
+            btn_agregar_DR.Name = "btn_agregar_DR";
+            btn_agregar_DR.Size = new Size(17, 25);
+            btn_agregar_DR.TabIndex = 54;
+            btn_agregar_DR.Text = "+";
+            agr_dr.SetToolTip(btn_agregar_DR, "Agregar Nuevo Fiscal");
+            btn_agregar_DR.UseVisualStyleBackColor = false;
             // 
-            // BotonCambioTema
+            // btn_cambio_TEMA
             // 
-            BotonCambioTema.BackgroundImage = (Image)resources.GetObject("BotonCambioTema.BackgroundImage");
-            BotonCambioTema.BackgroundImageLayout = ImageLayout.Center;
-            BotonCambioTema.Location = new Point(400, 3);
-            BotonCambioTema.Name = "BotonCambioTema";
-            BotonCambioTema.Size = new Size(35, 35);
-            BotonCambioTema.TabIndex = 55;
-            BotonCambioTema.TabStop = false;
-            BotonCambioTema.Click += pictureBox1_Click;
+            btn_cambio_TEMA.BackgroundImage = (Image)resources.GetObject("btn_cambio_TEMA.BackgroundImage");
+            btn_cambio_TEMA.BackgroundImageLayout = ImageLayout.Center;
+            btn_cambio_TEMA.Location = new Point(400, 3);
+            btn_cambio_TEMA.Name = "btn_cambio_TEMA";
+            btn_cambio_TEMA.Size = new Size(35, 35);
+            btn_cambio_TEMA.TabIndex = 55;
+            btn_cambio_TEMA.TabStop = false;
+            TEMA.SetToolTip(btn_cambio_TEMA, "Cambiar a modo Oscuro");
+            btn_cambio_TEMA.Click += pictureBox1_Click;
             // 
-            // BotonConfiguracion
+            // btn_CONFIGURACION
             // 
-            BotonConfiguracion.BackgroundImage = (Image)resources.GetObject("BotonConfiguracion.BackgroundImage");
-            BotonConfiguracion.BackgroundImageLayout = ImageLayout.Center;
-            BotonConfiguracion.Location = new Point(12, 3);
-            BotonConfiguracion.Name = "BotonConfiguracion";
-            BotonConfiguracion.Size = new Size(35, 35);
-            BotonConfiguracion.TabIndex = 56;
-            BotonConfiguracion.TabStop = false;
-            BotonConfiguracion.Click += pictureBox2_Click;
+            btn_CONFIGURACION.BackgroundImage = (Image)resources.GetObject("btn_CONFIGURACION.BackgroundImage");
+            btn_CONFIGURACION.BackgroundImageLayout = ImageLayout.Center;
+            btn_CONFIGURACION.Location = new Point(12, 3);
+            btn_CONFIGURACION.Name = "btn_CONFIGURACION";
+            btn_CONFIGURACION.Size = new Size(35, 35);
+            btn_CONFIGURACION.TabIndex = 56;
+            btn_CONFIGURACION.TabStop = false;
+            CONFIG.SetToolTip(btn_CONFIGURACION, "CONFIGURACION");
+            btn_CONFIGURACION.Click += pictureBox2_Click;
             // 
             // EnviarImprimir
             // 
@@ -445,6 +460,8 @@
             EnviarImprimir.Size = new Size(97, 81);
             EnviarImprimir.TabIndex = 57;
             EnviarImprimir.TabStop = false;
+            IMPRIMIR.SetToolTip(EnviarImprimir, "Enviar formulario");
+            EnviarImprimir.Click += EnviarImprimir_Click;
             // 
             // LimpiarContenido
             // 
@@ -455,6 +472,7 @@
             LimpiarContenido.Size = new Size(52, 50);
             LimpiarContenido.TabIndex = 58;
             LimpiarContenido.TabStop = false;
+            LIMPIAR.SetToolTip(LimpiarContenido, "Limpiar Formulario");
             // 
             // GuardarArchivo
             // 
@@ -465,6 +483,7 @@
             GuardarArchivo.Size = new Size(54, 50);
             GuardarArchivo.TabIndex = 59;
             GuardarArchivo.TabStop = false;
+            GUADAR.SetToolTip(GuardarArchivo, "Guardar documento");
             GuardarArchivo.Click += pictureBox5_Click;
             // 
             // BuscarArchivos
@@ -476,6 +495,7 @@
             BuscarArchivos.Size = new Size(49, 50);
             BuscarArchivos.TabIndex = 60;
             BuscarArchivos.TabStop = false;
+            BUSCAR.SetToolTip(BuscarArchivos, "Buscar documentos guardados");
             // 
             // CONFIG
             // 
@@ -484,38 +504,57 @@
             CONFIG.ReshowDelay = 250;
             CONFIG.Tag = "IMPRIMIR";
             // 
-            // button2
+            // btn_agregar_IMPUTADO
             // 
-            button2.BackColor = SystemColors.ControlLight;
-            button2.Cursor = Cursors.Hand;
-            button2.Location = new Point(400, 165);
-            button2.Name = "button2";
-            button2.Size = new Size(18, 23);
-            button2.TabIndex = 62;
-            button2.Text = "+";
-            button2.UseVisualStyleBackColor = false;
+            btn_agregar_IMPUTADO.BackColor = SystemColors.ControlLight;
+            btn_agregar_IMPUTADO.Cursor = Cursors.Hand;
+            btn_agregar_IMPUTADO.Location = new Point(400, 165);
+            btn_agregar_IMPUTADO.Name = "btn_agregar_IMPUTADO";
+            btn_agregar_IMPUTADO.Size = new Size(18, 23);
+            btn_agregar_IMPUTADO.TabIndex = 62;
+            btn_agregar_IMPUTADO.Text = "+";
+            agr_imputado.SetToolTip(btn_agregar_IMPUTADO, "Agregar Nuevo Imputado");
+            btn_agregar_IMPUTADO.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btn_agregar_DENUNCIANTE
             // 
-            button1.BackColor = SystemColors.ControlLight;
-            button1.Cursor = Cursors.Hand;
-            button1.Location = new Point(400, 129);
-            button1.Name = "button1";
-            button1.Size = new Size(18, 23);
-            button1.TabIndex = 63;
-            button1.Text = "+";
-            button1.UseVisualStyleBackColor = false;
+            btn_agregar_DENUNCIANTE.BackColor = SystemColors.ControlLight;
+            btn_agregar_DENUNCIANTE.Cursor = Cursors.Hand;
+            btn_agregar_DENUNCIANTE.Location = new Point(400, 129);
+            btn_agregar_DENUNCIANTE.Name = "btn_agregar_DENUNCIANTE";
+            btn_agregar_DENUNCIANTE.Size = new Size(18, 23);
+            btn_agregar_DENUNCIANTE.TabIndex = 63;
+            btn_agregar_DENUNCIANTE.Text = "+";
+            agr_denunciante.SetToolTip(btn_agregar_DENUNCIANTE, "Agregar Nuevo Denunciante");
+            btn_agregar_DENUNCIANTE.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btn_agregar_CARATULA
             // 
-            button6.BackColor = SystemColors.ControlLight;
-            button6.Cursor = Cursors.Hand;
-            button6.Location = new Point(400, 92);
-            button6.Name = "button6";
-            button6.Size = new Size(18, 23);
-            button6.TabIndex = 64;
-            button6.Text = "+";
-            button6.UseVisualStyleBackColor = false;
+            btn_agregar_CARATULA.BackColor = SystemColors.ControlLight;
+            btn_agregar_CARATULA.Cursor = Cursors.Hand;
+            btn_agregar_CARATULA.Location = new Point(400, 92);
+            btn_agregar_CARATULA.Name = "btn_agregar_CARATULA";
+            btn_agregar_CARATULA.Size = new Size(18, 23);
+            btn_agregar_CARATULA.TabIndex = 64;
+            btn_agregar_CARATULA.Text = "+";
+            agr_caratula.SetToolTip(btn_agregar_CARATULA, "Agregar Nueva Caratula");
+            btn_agregar_CARATULA.UseVisualStyleBackColor = false;
+            // 
+            // btn_agregar_DEPENDENCIA
+            // 
+            btn_agregar_DEPENDENCIA.BackColor = SystemColors.ControlLight;
+            btn_agregar_DEPENDENCIA.Cursor = Cursors.Hand;
+            btn_agregar_DEPENDENCIA.Location = new Point(134, 317);
+            btn_agregar_DEPENDENCIA.Name = "btn_agregar_DEPENDENCIA";
+            btn_agregar_DEPENDENCIA.Size = new Size(18, 23);
+            btn_agregar_DEPENDENCIA.TabIndex = 65;
+            btn_agregar_DEPENDENCIA.Text = "+";
+            agr_dependencia.SetToolTip(btn_agregar_DEPENDENCIA, "Agregar Nueva Dependencia");
+            btn_agregar_DEPENDENCIA.UseVisualStyleBackColor = false;
+            // 
+            // agr_caratula
+            // 
+            agr_caratula.Popup += toolTip1_Popup;
             // 
             // Inicio_Cierre
             // 
@@ -524,42 +563,43 @@
             BackColor = SystemColors.GradientInactiveCaption;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(465, 501);
-            Controls.Add(button6);
-            Controls.Add(button1);
-            Controls.Add(button2);
+            Controls.Add(dato_DEPENDENCIA);
+            Controls.Add(dato_DR);
+            Controls.Add(btn_agregar_DEPENDENCIA);
+            Controls.Add(btn_agregar_CARATULA);
+            Controls.Add(btn_agregar_DENUNCIANTE);
+            Controls.Add(btn_agregar_IMPUTADO);
             Controls.Add(BuscarArchivos);
             Controls.Add(GuardarArchivo);
             Controls.Add(LimpiarContenido);
             Controls.Add(EnviarImprimir);
-            Controls.Add(BotonConfiguracion);
-            Controls.Add(BotonCambioTema);
-            Controls.Add(button7);
-            Controls.Add(numericUpDown2);
-            Controls.Add(numericUpDown1);
-            Controls.Add(comboBox11);
+            Controls.Add(btn_CONFIGURACION);
+            Controls.Add(btn_cambio_TEMA);
+            Controls.Add(btn_agregar_DR);
+            Controls.Add(dato3_numero_IPP);
+            Controls.Add(dato_DIA);
             Controls.Add(label16);
-            Controls.Add(comboBox10);
             Controls.Add(dependencia);
-            Controls.Add(comboBox9);
-            Controls.Add(comboBox8);
-            Controls.Add(comboBox6);
+            Controls.Add(dato_SECRETARIO);
+            Controls.Add(dato_INSTRUCTOR);
+            Controls.Add(dato_UFID);
             Controls.Add(label14);
             Controls.Add(label13);
             Controls.Add(label12);
             Controls.Add(label11);
-            Controls.Add(comboBox7);
-            Controls.Add(comboBox5);
-            Controls.Add(comboBox4);
+            Controls.Add(dato4_año_IPP);
+            Controls.Add(dato2_IPP);
+            Controls.Add(dato1_IPP);
             Controls.Add(label10);
             Controls.Add(label9);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(dato_AÑO);
+            Controls.Add(dato_MES);
+            Controls.Add(btn_agregar_SECRETARIO);
+            Controls.Add(btn_agregar_INSTRUCTOR);
+            Controls.Add(btn_agregar_UFID);
+            Controls.Add(dato_IMPUTADO);
+            Controls.Add(dato_DENUNCIANTE);
+            Controls.Add(dato_CARATULA);
             Controls.Add(fecha);
             Controls.Add(secretario);
             Controls.Add(instructor);
@@ -573,17 +613,11 @@
             Name = "Inicio_Cierre";
             Opacity = 0.95D;
             Text = "Ofelia - Sara";
-            LIMPIAR.SetToolTip(this, "Limpiar Formulario");
-            IMPRIMIR.SetToolTip(this, "Enviar a revision e impresión");
-            BUSCAR.SetToolTip(this, "Buscar archivos guardados");
-            GUADAR.SetToolTip(this, "Guardar copia de documento");
-            CONFIG.SetToolTip(this, "CONFIGURACION");
-            TEMA.SetToolTip(this, "Cambiar a modo oscuro");
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)BotonCambioTema).EndInit();
-            ((System.ComponentModel.ISupportInitialize)BotonConfiguracion).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dato_DIA).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dato3_numero_IPP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btn_cambio_TEMA).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btn_CONFIGURACION).EndInit();
             ((System.ComponentModel.ISupportInitialize)EnviarImprimir).EndInit();
             ((System.ComponentModel.ISupportInitialize)LimpiarContenido).EndInit();
             ((System.ComponentModel.ISupportInitialize)GuardarArchivo).EndInit();
@@ -601,35 +635,35 @@
         private Label instructor;
         private Label secretario;
         private Label fecha;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
+        private TextBox dato_CARATULA;
+        private TextBox dato_DENUNCIANTE;
+        private TextBox dato_IMPUTADO;
+        private Button btn_agregar_UFID;
+        private Button btn_agregar_INSTRUCTOR;
+        private Button btn_agregar_SECRETARIO;
+        private ComboBox dato_MES;
+        private ComboBox dato_AÑO;
         private Label label9;
         private Label label10;
-        private ComboBox comboBox4;
-        private ComboBox comboBox5;
-        private ComboBox comboBox7;
+        private ComboBox dato1_IPP;
+        private ComboBox dato2_IPP;
+        private ComboBox dato4_año_IPP;
         private Label label11;
         private Label label12;
         private Label label13;
         private Label label14;
-        private ComboBox comboBox6;
-        private ComboBox comboBox8;
-        private ComboBox comboBox9;
+        private ComboBox dato_UFID;
+        private ComboBox dato_INSTRUCTOR;
+        private ComboBox dato_SECRETARIO;
         private Label dependencia;
-        private ComboBox comboBox10;
+        private ComboBox dato_DEPENDENCIA;
         private Label label16;
-        private ComboBox comboBox11;
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
-        private Button button7;
-        private PictureBox BotonCambioTema;
-        private PictureBox BotonConfiguracion;
+        private ComboBox dato_DR;
+        private NumericUpDown dato_DIA;
+        private NumericUpDown dato3_numero_IPP;
+        private Button btn_agregar_DR;
+        private PictureBox btn_cambio_TEMA;
+        private PictureBox btn_CONFIGURACION;
         private PictureBox EnviarImprimir;
         private PictureBox LimpiarContenido;
         private PictureBox GuardarArchivo;
@@ -640,8 +674,17 @@
         private ToolTip GUADAR;
         private ToolTip LIMPIAR;
         private ToolTip IMPRIMIR;
-        private Button button2;
-        private Button button1;
-        private Button button6;
+        private Button btn_agregar_IMPUTADO;
+        private Button btn_agregar_DENUNCIANTE;
+        private Button btn_agregar_CARATULA;
+        private Button btn_agregar_DEPENDENCIA;
+        private ToolTip agr_caratula;
+        private ToolTip agr_secretario;
+        private ToolTip agr_denunciante;
+        private ToolTip agr_ufid;
+        private ToolTip agr_instructor;
+        private ToolTip agr_dr;
+        private ToolTip agr_dependencia;
+        private ToolTip agr_imputado;
     }
 }
