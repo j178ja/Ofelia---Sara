@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "practica", "practica.csproj", "{6005E51E-25DC-4556-9A27-BC94E08BB2C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "practica", "practica.csproj", "{6005E51E-25DC-4556-9A27-BC94E08BB2C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{6381A30D-A43B-4B23-A502-BF445DC5B58D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		Plan del proyecto.txt = Plan del proyecto.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
