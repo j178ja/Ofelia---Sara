@@ -65,11 +65,15 @@
             comboBox9 = new ComboBox();
             label15 = new Label();
             comboBox10 = new ComboBox();
+            label16 = new Label();
+            button6 = new Button();
+            comboBox11 = new ComboBox();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(190, 406);
+            button1.Cursor = Cursors.Hand;
+            button1.Location = new Point(134, 406);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
@@ -79,8 +83,9 @@
             // button2
             // 
             button2.BackColor = SystemColors.ButtonHighlight;
+            button2.Cursor = Cursors.Hand;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(397, 406);
+            button2.Location = new Point(341, 406);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 1;
@@ -91,7 +96,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(86, 54);
+            label1.Location = new Point(26, 54);
             label1.Name = "label1";
             label1.Size = new Size(33, 15);
             label1.TabIndex = 2;
@@ -100,7 +105,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(86, 91);
+            label2.Location = new Point(26, 91);
             label2.Name = "label2";
             label2.Size = new Size(65, 15);
             label2.TabIndex = 3;
@@ -109,7 +114,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(86, 168);
+            label3.Location = new Point(26, 168);
             label3.Name = "label3";
             label3.Size = new Size(66, 15);
             label3.TabIndex = 4;
@@ -118,7 +123,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(86, 132);
+            label4.Location = new Point(26, 132);
             label4.Name = "label4";
             label4.Size = new Size(87, 15);
             label4.TabIndex = 5;
@@ -127,7 +132,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(89, 206);
+            label5.Location = new Point(26, 205);
             label5.Name = "label5";
             label5.Size = new Size(44, 15);
             label5.TabIndex = 6;
@@ -136,7 +141,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(86, 241);
+            label6.Location = new Point(26, 241);
             label6.Name = "label6";
             label6.Size = new Size(75, 15);
             label6.TabIndex = 7;
@@ -145,7 +150,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(86, 280);
+            label7.Location = new Point(29, 277);
             label7.Name = "label7";
             label7.Size = new Size(72, 15);
             label7.TabIndex = 8;
@@ -154,7 +159,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(86, 357);
+            label8.Location = new Point(26, 354);
             label8.Name = "label8";
             label8.Size = new Size(44, 15);
             label8.TabIndex = 9;
@@ -162,22 +167,23 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(190, 88);
+            textBox2.Location = new Point(134, 88);
             textBox2.Name = "textBox2";
+            textBox2.PlaceholderText = "Ej. HURTO";
             textBox2.Size = new Size(282, 23);
             textBox2.TabIndex = 11;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(190, 129);
+            textBox3.Location = new Point(134, 129);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(282, 23);
             textBox3.TabIndex = 12;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(190, 165);
+            textBox4.Location = new Point(134, 165);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(282, 23);
             textBox4.TabIndex = 13;
@@ -185,7 +191,7 @@
             // button3
             // 
             button3.BackColor = SystemColors.ControlLight;
-            button3.Location = new Point(190, 202);
+            button3.Location = new Point(134, 201);
             button3.Name = "button3";
             button3.Size = new Size(18, 23);
             button3.TabIndex = 21;
@@ -196,7 +202,8 @@
             // button4
             // 
             button4.BackColor = SystemColors.ControlLight;
-            button4.Location = new Point(190, 237);
+            button4.Cursor = Cursors.Hand;
+            button4.Location = new Point(134, 237);
             button4.Name = "button4";
             button4.Size = new Size(18, 23);
             button4.TabIndex = 22;
@@ -206,7 +213,8 @@
             // button5
             // 
             button5.BackColor = SystemColors.ControlLight;
-            button5.Location = new Point(190, 276);
+            button5.Cursor = Cursors.Hand;
+            button5.Location = new Point(134, 276);
             button5.Name = "button5";
             button5.Size = new Size(18, 23);
             button5.TabIndex = 23;
@@ -218,7 +226,7 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" });
-            comboBox1.Location = new Point(190, 354);
+            comboBox1.Location = new Point(134, 351);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(53, 23);
             comboBox1.TabIndex = 27;
@@ -227,7 +235,7 @@
             // 
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO ", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE" });
-            comboBox2.Location = new Point(276, 354);
+            comboBox2.Location = new Point(220, 351);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(87, 23);
             comboBox2.TabIndex = 28;
@@ -236,7 +244,7 @@
             // 
             comboBox3.FormattingEnabled = true;
             comboBox3.Items.AddRange(new object[] { "2024", "2025", "2026" });
-            comboBox3.Location = new Point(404, 354);
+            comboBox3.Location = new Point(340, 351);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(76, 23);
             comboBox3.TabIndex = 29;
@@ -245,7 +253,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(369, 357);
+            label9.Location = new Point(308, 354);
             label9.Name = "label9";
             label9.Size = new Size(21, 15);
             label9.TabIndex = 30;
@@ -254,7 +262,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(249, 357);
+            label10.Location = new Point(193, 354);
             label10.Name = "label10";
             label10.Size = new Size(21, 15);
             label10.TabIndex = 31;
@@ -264,7 +272,7 @@
             // 
             comboBox4.FormattingEnabled = true;
             comboBox4.Items.AddRange(new object[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10" });
-            comboBox4.Location = new Point(190, 51);
+            comboBox4.Location = new Point(134, 51);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(44, 23);
             comboBox4.TabIndex = 32;
@@ -273,7 +281,7 @@
             // 
             comboBox5.FormattingEnabled = true;
             comboBox5.Items.AddRange(new object[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10" });
-            comboBox5.Location = new Point(249, 51);
+            comboBox5.Location = new Point(193, 51);
             comboBox5.Name = "comboBox5";
             comboBox5.Size = new Size(44, 23);
             comboBox5.TabIndex = 33;
@@ -282,7 +290,7 @@
             // 
             comboBox7.FormattingEnabled = true;
             comboBox7.Items.AddRange(new object[] { "24", "25", "26" });
-            comboBox7.Location = new Point(410, 51);
+            comboBox7.Location = new Point(350, 51);
             comboBox7.Name = "comboBox7";
             comboBox7.Size = new Size(40, 23);
             comboBox7.TabIndex = 35;
@@ -290,7 +298,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(234, 54);
+            label11.Location = new Point(180, 56);
             label11.Name = "label11";
             label11.Size = new Size(12, 15);
             label11.TabIndex = 36;
@@ -299,7 +307,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(299, 54);
+            label12.Location = new Point(240, 56);
             label12.Name = "label12";
             label12.Size = new Size(12, 15);
             label12.TabIndex = 37;
@@ -308,16 +316,18 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(392, 54);
+            label13.Location = new Point(340, 56);
+            label13.Margin = new Padding(0);
             label13.Name = "label13";
             label13.Size = new Size(12, 15);
             label13.TabIndex = 38;
             label13.Text = "-";
+            label13.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(456, 54);
+            label14.Location = new Point(394, 56);
             label14.Name = "label14";
             label14.Size = new Size(24, 15);
             label14.TabIndex = 39;
@@ -325,7 +335,8 @@
             // 
             // button9
             // 
-            button9.Location = new Point(49, 3);
+            button9.Cursor = Cursors.Hand;
+            button9.Location = new Point(12, 3);
             button9.Name = "button9";
             button9.Size = new Size(33, 23);
             button9.TabIndex = 40;
@@ -334,7 +345,8 @@
             // 
             // button10
             // 
-            button10.Location = new Point(488, 3);
+            button10.Cursor = Cursors.Hand;
+            button10.Location = new Point(408, 3);
             button10.Name = "button10";
             button10.Size = new Size(29, 23);
             button10.TabIndex = 41;
@@ -343,7 +355,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(308, 51);
+            textBox1.Location = new Point(252, 51);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(86, 23);
             textBox1.TabIndex = 42;
@@ -352,7 +364,7 @@
             // 
             comboBox6.FormattingEnabled = true;
             comboBox6.Items.AddRange(new object[] { "04", "05", "06", "08", "FRPJ N°1", "FRPJ N°2" });
-            comboBox6.Location = new Point(203, 202);
+            comboBox6.Location = new Point(147, 202);
             comboBox6.Name = "comboBox6";
             comboBox6.Size = new Size(76, 23);
             comboBox6.TabIndex = 43;
@@ -361,7 +373,7 @@
             // 
             comboBox8.FormattingEnabled = true;
             comboBox8.Items.AddRange(new object[] { "COMISARIO  MIGUEL MORENO", "SUBCOMISARIO MELISA PEREA PEÑA" });
-            comboBox8.Location = new Point(203, 238);
+            comboBox8.Location = new Point(147, 238);
             comboBox8.Name = "comboBox8";
             comboBox8.Size = new Size(269, 23);
             comboBox8.TabIndex = 44;
@@ -370,7 +382,7 @@
             // 
             comboBox9.FormattingEnabled = true;
             comboBox9.Items.AddRange(new object[] { "OFICIAL AYUDANTE JORGE BONATO", "OFICIAL AYUDANTE ARIEL VAZQUEZ", "OFICIAL SUBINSPECTOR MARTIN ALI BONATO", "SARGENTO NEREA SANDOVAL" });
-            comboBox9.Location = new Point(203, 277);
+            comboBox9.Location = new Point(147, 277);
             comboBox9.Name = "comboBox9";
             comboBox9.Size = new Size(269, 23);
             comboBox9.TabIndex = 45;
@@ -378,7 +390,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(86, 323);
+            label15.Location = new Point(26, 320);
             label15.Name = "label15";
             label15.Size = new Size(85, 15);
             label15.TabIndex = 46;
@@ -389,16 +401,49 @@
             // 
             comboBox10.FormattingEnabled = true;
             comboBox10.Items.AddRange(new object[] { "EPC I PINAMAR", "EPC II OSTENDE", "EPC III VALERIA DEL MAR", "EPC IV CARILO" });
-            comboBox10.Location = new Point(203, 320);
+            comboBox10.Location = new Point(134, 317);
             comboBox10.Name = "comboBox10";
-            comboBox10.Size = new Size(269, 23);
+            comboBox10.Size = new Size(282, 23);
             comboBox10.TabIndex = 47;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(244, 205);
+            label16.Name = "label16";
+            label16.Size = new Size(33, 15);
+            label16.TabIndex = 48;
+            label16.Text = "Dr/a.";
+            // 
+            // button6
+            // 
+            button6.BackColor = SystemColors.ControlLight;
+            button6.Location = new Point(324, 203);
+            button6.Name = "button6";
+            button6.Size = new Size(18, 23);
+            button6.TabIndex = 50;
+            button6.Text = "+";
+            button6.UseVisualStyleBackColor = false;
+            // 
+            // comboBox11
+            // 
+            comboBox11.FormattingEnabled = true;
+            comboBox11.Items.AddRange(new object[] { "PABLO CALDERON", "WALER MERCURI", "VERONICA ZAMBONI" });
+            comboBox11.Location = new Point(283, 203);
+            comboBox11.Name = "comboBox11";
+            comboBox11.Size = new Size(133, 23);
+            comboBox11.TabIndex = 51;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(569, 487);
+            BackColor = SystemColors.GradientInactiveCaption;
+            BackgroundImageLayout = ImageLayout.None;
+            ClientSize = new Size(465, 457);
+            Controls.Add(comboBox11);
+            Controls.Add(button6);
+            Controls.Add(label16);
             Controls.Add(comboBox10);
             Controls.Add(label15);
             Controls.Add(comboBox9);
@@ -435,6 +480,7 @@
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Ofelia - Sara";
@@ -481,5 +527,8 @@
         private ComboBox comboBox9;
         private Label label15;
         private ComboBox comboBox10;
+        private Label label16;
+        private Button button6;
+        private ComboBox comboBox11;
     }
 }
