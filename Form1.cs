@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace practica
 {
-    public partial class Form1 : Form
+    public partial class Inicio_Cierre : Form
     {
         // Importar las funciones de la API de Windows necesarias
         [DllImport("user32.dll")]
@@ -32,7 +32,7 @@ namespace practica
             public int Bottom;
         }
 
-        public Form1()
+        public Inicio_Cierre()
         {
             InitializeComponent();
         }
@@ -140,6 +140,11 @@ namespace practica
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
 
         }
