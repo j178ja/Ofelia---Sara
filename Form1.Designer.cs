@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             button1 = new Button();
             button2 = new Button();
             label1 = new Label();
@@ -63,6 +64,7 @@
             comboBox8 = new ComboBox();
             comboBox9 = new ComboBox();
             label15 = new Label();
+            comboBox10 = new ComboBox();
             SuspendLayout();
             // 
             // button1
@@ -125,7 +127,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(86, 202);
+            label5.Location = new Point(89, 206);
             label5.Name = "label5";
             label5.Size = new Size(44, 15);
             label5.TabIndex = 6;
@@ -182,31 +184,34 @@
             // 
             // button3
             // 
+            button3.BackColor = SystemColors.ControlLight;
             button3.Location = new Point(190, 202);
             button3.Name = "button3";
             button3.Size = new Size(18, 23);
             button3.TabIndex = 21;
             button3.Text = "+";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // button4
             // 
+            button4.BackColor = SystemColors.ControlLight;
             button4.Location = new Point(190, 237);
             button4.Name = "button4";
             button4.Size = new Size(18, 23);
             button4.TabIndex = 22;
             button4.Text = "+";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
+            button5.BackColor = SystemColors.ControlLight;
             button5.Location = new Point(190, 276);
             button5.Name = "button5";
             button5.Size = new Size(18, 23);
             button5.TabIndex = 23;
             button5.Text = "+";
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
             // comboBox1
@@ -373,18 +378,28 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(89, 323);
+            label15.Location = new Point(86, 323);
             label15.Name = "label15";
             label15.Size = new Size(85, 15);
             label15.TabIndex = 46;
             label15.Text = "DEPENDENCIA";
             label15.Click += label15_Click;
             // 
+            // comboBox10
+            // 
+            comboBox10.FormattingEnabled = true;
+            comboBox10.Items.AddRange(new object[] { "EPC I PINAMAR", "EPC II OSTENDE", "EPC III VALERIA DEL MAR", "EPC IV CARILO" });
+            comboBox10.Location = new Point(203, 320);
+            comboBox10.Name = "comboBox10";
+            comboBox10.Size = new Size(269, 23);
+            comboBox10.TabIndex = 47;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(569, 487);
+            Controls.Add(comboBox10);
             Controls.Add(label15);
             Controls.Add(comboBox9);
             Controls.Add(comboBox8);
@@ -420,6 +435,7 @@
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Ofelia - Sara";
             Load += Form1_Load;
@@ -464,5 +480,6 @@
         private ComboBox comboBox8;
         private ComboBox comboBox9;
         private Label label15;
+        private ComboBox comboBox10;
     }
 }
