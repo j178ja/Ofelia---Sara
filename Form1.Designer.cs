@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            button1 = new Button();
-            button2 = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -45,7 +43,6 @@
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
-            comboBox1 = new ComboBox();
             comboBox2 = new ComboBox();
             comboBox3 = new ComboBox();
             label9 = new Label();
@@ -57,41 +54,27 @@
             label12 = new Label();
             label13 = new Label();
             label14 = new Label();
-            button9 = new Button();
-            button10 = new Button();
-            textBox1 = new TextBox();
             comboBox6 = new ComboBox();
             comboBox8 = new ComboBox();
             comboBox9 = new ComboBox();
             label15 = new Label();
             comboBox10 = new ComboBox();
             label16 = new Label();
-            button6 = new Button();
             comboBox11 = new ComboBox();
+            numericUpDown1 = new NumericUpDown();
+            numericUpDown2 = new NumericUpDown();
+            button7 = new Button();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Cursor = Cursors.Hand;
-            button1.Location = new Point(134, 406);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "LIMPIAR";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.BackColor = SystemColors.ButtonHighlight;
-            button2.Cursor = Cursors.Hand;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(341, 406);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "ENVIAR";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
             // 
             // label1
             // 
@@ -191,7 +174,7 @@
             // button3
             // 
             button3.BackColor = SystemColors.ControlLight;
-            button3.Location = new Point(134, 201);
+            button3.Location = new Point(134, 202);
             button3.Name = "button3";
             button3.Size = new Size(18, 23);
             button3.TabIndex = 21;
@@ -203,7 +186,7 @@
             // 
             button4.BackColor = SystemColors.ControlLight;
             button4.Cursor = Cursors.Hand;
-            button4.Location = new Point(134, 237);
+            button4.Location = new Point(134, 238);
             button4.Name = "button4";
             button4.Size = new Size(18, 23);
             button4.TabIndex = 22;
@@ -214,22 +197,13 @@
             // 
             button5.BackColor = SystemColors.ControlLight;
             button5.Cursor = Cursors.Hand;
-            button5.Location = new Point(134, 276);
+            button5.Location = new Point(134, 277);
             button5.Name = "button5";
             button5.Size = new Size(18, 23);
             button5.TabIndex = 23;
             button5.Text = "+";
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" });
-            comboBox1.Location = new Point(134, 351);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(53, 23);
-            comboBox1.TabIndex = 27;
             // 
             // comboBox2
             // 
@@ -290,7 +264,7 @@
             // 
             comboBox7.FormattingEnabled = true;
             comboBox7.Items.AddRange(new object[] { "24", "25", "26" });
-            comboBox7.Location = new Point(350, 51);
+            comboBox7.Location = new Point(353, 51);
             comboBox7.Name = "comboBox7";
             comboBox7.Size = new Size(40, 23);
             comboBox7.TabIndex = 35;
@@ -332,33 +306,6 @@
             label14.Size = new Size(24, 15);
             label14.TabIndex = 39;
             label14.Text = "/00";
-            // 
-            // button9
-            // 
-            button9.Cursor = Cursors.Hand;
-            button9.Location = new Point(12, 3);
-            button9.Name = "button9";
-            button9.Size = new Size(33, 23);
-            button9.TabIndex = 40;
-            button9.Text = "{O}";
-            button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            button10.Cursor = Cursors.Hand;
-            button10.Location = new Point(408, 3);
-            button10.Name = "button10";
-            button10.Size = new Size(29, 23);
-            button10.TabIndex = 41;
-            button10.Text = "O";
-            button10.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(252, 51);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(86, 23);
-            textBox1.TabIndex = 42;
             // 
             // comboBox6
             // 
@@ -409,30 +356,91 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(244, 205);
+            label16.Location = new Point(232, 205);
             label16.Name = "label16";
             label16.Size = new Size(33, 15);
             label16.TabIndex = 48;
             label16.Text = "Dr/a.";
             // 
-            // button6
-            // 
-            button6.BackColor = SystemColors.ControlLight;
-            button6.Location = new Point(324, 203);
-            button6.Name = "button6";
-            button6.Size = new Size(18, 23);
-            button6.TabIndex = 50;
-            button6.Text = "+";
-            button6.UseVisualStyleBackColor = false;
-            // 
             // comboBox11
             // 
             comboBox11.FormattingEnabled = true;
             comboBox11.Items.AddRange(new object[] { "PABLO CALDERON", "WALER MERCURI", "VERONICA ZAMBONI" });
-            comboBox11.Location = new Point(283, 203);
+            comboBox11.Location = new Point(283, 202);
             comboBox11.Name = "comboBox11";
             comboBox11.Size = new Size(133, 23);
             comboBox11.TabIndex = 51;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(134, 351);
+            numericUpDown1.Maximum = new decimal(new int[] { 31, 0, 0, 0 });
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(59, 23);
+            numericUpDown1.TabIndex = 52;
+            numericUpDown1.TextAlign = HorizontalAlignment.Center;
+            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
+            // 
+            // numericUpDown2
+            // 
+            numericUpDown2.Location = new Point(251, 52);
+            numericUpDown2.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(86, 23);
+            numericUpDown2.TabIndex = 53;
+            numericUpDown2.TextAlign = HorizontalAlignment.Center;
+            // 
+            // button7
+            // 
+            button7.BackColor = SystemColors.ControlLight;
+            button7.Location = new Point(271, 201);
+            button7.Name = "button7";
+            button7.Size = new Size(18, 23);
+            button7.TabIndex = 54;
+            button7.Text = "+";
+            button7.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox1.Location = new Point(400, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(35, 35);
+            pictureBox1.TabIndex = 55;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox2.Location = new Point(12, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(35, 35);
+            pictureBox2.TabIndex = 56;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
+            pictureBox3.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox3.Location = new Point(335, 406);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(97, 81);
+            pictureBox3.TabIndex = 57;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
+            pictureBox4.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox4.Location = new Point(134, 425);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(52, 50);
+            pictureBox4.TabIndex = 58;
+            pictureBox4.TabStop = false;
             // 
             // Form1
             // 
@@ -440,18 +448,21 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(465, 457);
+            ClientSize = new Size(465, 501);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
+            Controls.Add(button7);
+            Controls.Add(numericUpDown2);
+            Controls.Add(numericUpDown1);
             Controls.Add(comboBox11);
-            Controls.Add(button6);
             Controls.Add(label16);
             Controls.Add(comboBox10);
             Controls.Add(label15);
             Controls.Add(comboBox9);
             Controls.Add(comboBox8);
             Controls.Add(comboBox6);
-            Controls.Add(textBox1);
-            Controls.Add(button10);
-            Controls.Add(button9);
             Controls.Add(label14);
             Controls.Add(label13);
             Controls.Add(label12);
@@ -463,7 +474,6 @@
             Controls.Add(label9);
             Controls.Add(comboBox3);
             Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -478,21 +488,23 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(button2);
-            Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
+            Opacity = 0.95D;
             Text = "Ofelia - Sara";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
-        private Button button2;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -507,7 +519,6 @@
         private Button button3;
         private Button button4;
         private Button button5;
-        private ComboBox comboBox1;
         private ComboBox comboBox2;
         private ComboBox comboBox3;
         private Label label9;
@@ -519,16 +530,19 @@
         private Label label12;
         private Label label13;
         private Label label14;
-        private Button button9;
-        private Button button10;
-        private TextBox textBox1;
         private ComboBox comboBox6;
         private ComboBox comboBox8;
         private ComboBox comboBox9;
         private Label label15;
         private ComboBox comboBox10;
         private Label label16;
-        private Button button6;
         private ComboBox comboBox11;
+        private NumericUpDown numericUpDown1;
+        private NumericUpDown numericUpDown2;
+        private Button button7;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
     }
 }
