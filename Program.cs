@@ -11,7 +11,7 @@ namespace practica
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Inicio_Cierre());
+            Application.Run(new fomulario_IPP());
         }
     }
 }

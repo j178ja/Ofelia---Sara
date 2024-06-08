@@ -1,3 +1,4 @@
+using Ofelia_Sara;
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -5,7 +6,7 @@ using System.Windows.Forms;
 
 namespace practica
 {
-    public partial class Inicio_Cierre : Form
+    public partial class fomulario_IPP : salto_de_input
     {
         // Importar las funciones de la API de Windows necesarias
         [DllImport("user32.dll")]
@@ -32,7 +33,7 @@ namespace practica
             public int Bottom;
         }
 
-        public Inicio_Cierre()
+        public fomulario_IPP()
         {
             InitializeComponent();
         }
@@ -96,8 +97,16 @@ namespace practica
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            // Para que el texto siempre sea mayuscula
+            TextBox textBox = sender as TextBox;
+            if (textBox != null)
+            {
+                textBox.Text = textBox.Text.ToUpper();
+                // Coloca el cursor al final del texto para mantener la posición correcta
+                textBox.SelectionStart = textBox.Text.Length;
+            }
         }
+
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -157,6 +166,52 @@ namespace practica
         private void EnviarImprimir_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void LimpiarContenido_Click(object sender, EventArgs e)
+        {
+            // Limpiar todos los TextBox
+            foreach (Control control in Controls)
+            {
+                if (control is TextBox textBox)
+                {
+                    textBox.Text = string.Empty; // reemplaza contenido por cadena vacia
+                }
+                // Limpiar todos los ComboBox
+                if (control is ComboBox comboBox)
+                {
+                    comboBox.Text = string.Empty; // reemplaza contenido por cadena vacia
+                }
+                // Limpiar todos los numericUpDown
+                if (control is NumericUpDown numericUpDown)
+                {
+                    numericUpDown.Text = string.Empty; // reemplaza contenido por cadena vacia
+                }
+            }
+        }
+
+        private void dato_DENUNCIANTE_TextChanged(object sender, EventArgs e)
+        {
+            // Para que el texto siempre sea mayuscula
+            TextBox textBox = sender as TextBox;
+            if (textBox != null)
+            {
+                textBox.Text = textBox.Text.ToUpper();
+                // Coloca el cursor al final del texto para mantener la posición correcta
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+
+        private void dato_IMPUTADO_TextChanged(object sender, EventArgs e)
+        {
+            // Para que el texto siempre sea mayuscula
+            TextBox textBox = sender as TextBox;
+            if (textBox != null)
+            {
+                textBox.Text = textBox.Text.ToUpper();
+                // Coloca el cursor al final del texto para mantener la posición correcta
+                textBox.SelectionStart = textBox.Text.Length;
+            }
         }
     }
 }

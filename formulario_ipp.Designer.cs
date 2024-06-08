@@ -1,6 +1,6 @@
 ﻿namespace practica
 {
-    partial class Inicio_Cierre
+    partial class fomulario_IPP
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio_Cierre));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fomulario_IPP));
             ipp = new Label();
             caratula = new Label();
             imputado = new Label();
@@ -177,7 +177,7 @@
             dato_CARATULA.Name = "dato_CARATULA";
             dato_CARATULA.PlaceholderText = "Ej. HURTO";
             dato_CARATULA.Size = new Size(267, 23);
-            dato_CARATULA.TabIndex = 11;
+            dato_CARATULA.TabIndex = 5;
             dato_CARATULA.TextChanged += textBox2_TextChanged;
             // 
             // dato_DENUNCIANTE
@@ -185,14 +185,16 @@
             dato_DENUNCIANTE.Location = new Point(134, 129);
             dato_DENUNCIANTE.Name = "dato_DENUNCIANTE";
             dato_DENUNCIANTE.Size = new Size(267, 23);
-            dato_DENUNCIANTE.TabIndex = 12;
+            dato_DENUNCIANTE.TabIndex = 6;
+            dato_DENUNCIANTE.TextChanged += dato_DENUNCIANTE_TextChanged;
             // 
             // dato_IMPUTADO
             // 
             dato_IMPUTADO.Location = new Point(134, 165);
             dato_IMPUTADO.Name = "dato_IMPUTADO";
             dato_IMPUTADO.Size = new Size(267, 23);
-            dato_IMPUTADO.TabIndex = 13;
+            dato_IMPUTADO.TabIndex = 7;
+            dato_IMPUTADO.TextChanged += dato_IMPUTADO_TextChanged;
             // 
             // btn_agregar_UFID
             // 
@@ -238,7 +240,7 @@
             dato_MES.Location = new Point(220, 351);
             dato_MES.Name = "dato_MES";
             dato_MES.Size = new Size(87, 23);
-            dato_MES.TabIndex = 28;
+            dato_MES.TabIndex = 14;
             // 
             // dato_AÑO
             // 
@@ -247,7 +249,7 @@
             dato_AÑO.Location = new Point(340, 351);
             dato_AÑO.Name = "dato_AÑO";
             dato_AÑO.Size = new Size(76, 23);
-            dato_AÑO.TabIndex = 29;
+            dato_AÑO.TabIndex = 15;
             dato_AÑO.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             // 
             // label9
@@ -275,7 +277,7 @@
             dato1_IPP.Location = new Point(134, 57);
             dato1_IPP.Name = "dato1_IPP";
             dato1_IPP.Size = new Size(44, 23);
-            dato1_IPP.TabIndex = 32;
+            dato1_IPP.TabIndex = 1;
             // 
             // dato2_IPP
             // 
@@ -284,7 +286,7 @@
             dato2_IPP.Location = new Point(193, 57);
             dato2_IPP.Name = "dato2_IPP";
             dato2_IPP.Size = new Size(44, 23);
-            dato2_IPP.TabIndex = 33;
+            dato2_IPP.TabIndex = 2;
             // 
             // dato4_año_IPP
             // 
@@ -293,7 +295,7 @@
             dato4_año_IPP.Location = new Point(352, 57);
             dato4_año_IPP.Name = "dato4_año_IPP";
             dato4_año_IPP.Size = new Size(40, 23);
-            dato4_año_IPP.TabIndex = 35;
+            dato4_año_IPP.TabIndex = 4;
             // 
             // label11
             // 
@@ -340,7 +342,7 @@
             dato_UFID.Location = new Point(147, 202);
             dato_UFID.Name = "dato_UFID";
             dato_UFID.Size = new Size(76, 23);
-            dato_UFID.TabIndex = 43;
+            dato_UFID.TabIndex = 8;
             // 
             // dato_INSTRUCTOR
             // 
@@ -349,7 +351,7 @@
             dato_INSTRUCTOR.Location = new Point(147, 238);
             dato_INSTRUCTOR.Name = "dato_INSTRUCTOR";
             dato_INSTRUCTOR.Size = new Size(269, 23);
-            dato_INSTRUCTOR.TabIndex = 44;
+            dato_INSTRUCTOR.TabIndex = 10;
             // 
             // dato_SECRETARIO
             // 
@@ -358,7 +360,7 @@
             dato_SECRETARIO.Location = new Point(147, 277);
             dato_SECRETARIO.Name = "dato_SECRETARIO";
             dato_SECRETARIO.Size = new Size(269, 23);
-            dato_SECRETARIO.TabIndex = 45;
+            dato_SECRETARIO.TabIndex = 11;
             // 
             // dependencia
             // 
@@ -377,7 +379,7 @@
             dato_DEPENDENCIA.Location = new Point(147, 317);
             dato_DEPENDENCIA.Name = "dato_DEPENDENCIA";
             dato_DEPENDENCIA.Size = new Size(269, 23);
-            dato_DEPENDENCIA.TabIndex = 47;
+            dato_DEPENDENCIA.TabIndex = 12;
             // 
             // label16
             // 
@@ -395,7 +397,7 @@
             dato_DR.Location = new Point(284, 202);
             dato_DR.Name = "dato_DR";
             dato_DR.Size = new Size(132, 23);
-            dato_DR.TabIndex = 51;
+            dato_DR.TabIndex = 9;
             // 
             // dato_DIA
             // 
@@ -403,7 +405,7 @@
             dato_DIA.Maximum = new decimal(new int[] { 31, 0, 0, 0 });
             dato_DIA.Name = "dato_DIA";
             dato_DIA.Size = new Size(59, 23);
-            dato_DIA.TabIndex = 52;
+            dato_DIA.TabIndex = 13;
             dato_DIA.TextAlign = HorizontalAlignment.Center;
             dato_DIA.ValueChanged += numericUpDown1_ValueChanged;
             // 
@@ -413,7 +415,7 @@
             dato3_numero_IPP.Maximum = new decimal(new int[] { 999999, 0, 0, 0 });
             dato3_numero_IPP.Name = "dato3_numero_IPP";
             dato3_numero_IPP.Size = new Size(86, 23);
-            dato3_numero_IPP.TabIndex = 53;
+            dato3_numero_IPP.TabIndex = 3;
             dato3_numero_IPP.TextAlign = HorizontalAlignment.Center;
             // 
             // btn_agregar_DR
@@ -473,6 +475,7 @@
             LimpiarContenido.TabIndex = 58;
             LimpiarContenido.TabStop = false;
             LIMPIAR.SetToolTip(LimpiarContenido, "Limpiar Formulario");
+            LimpiarContenido.Click += LimpiarContenido_Click;
             // 
             // GuardarArchivo
             // 
@@ -556,11 +559,11 @@
             // 
             agr_caratula.Popup += toolTip1_Popup;
             // 
-            // Inicio_Cierre
+            // fomulario_IPP
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GradientInactiveCaption;
+            BackColor = SystemColors.GradientActiveCaption;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(465, 501);
             Controls.Add(dato_DEPENDENCIA);
@@ -610,9 +613,9 @@
             Controls.Add(ipp);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Inicio_Cierre";
-            Opacity = 0.95D;
-            Text = "Ofelia - Sara";
+            Name = "fomulario_IPP";
+            Opacity = 0.98D;
+            Text = "Ofelia - Sara            FORMULARIO I.P.P.";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dato_DIA).EndInit();
             ((System.ComponentModel.ISupportInitialize)dato3_numero_IPP).EndInit();
