@@ -3,6 +3,7 @@ using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace practica
 {
@@ -32,11 +33,24 @@ namespace practica
             public int Right;
             public int Bottom;
         }
+        private System.Windows.Forms.TextBox textBox2;
 
         public fomulario_IPP()
         {
             InitializeComponent();
+
+            // Inicializa textBox2 y configura sus propiedades
+            textBox2 = new System.Windows.Forms.TextBox();
+            // Configura otras propiedades según sea necesario
+
+            // Asocia los eventos a los manejadores de eventos
+            textBox2.TextChanged += textBox2_TextChanged;
+            textBox2.KeyPress += textBox2_KeyPress;
+
+            // Agrega textBox2 al formulario
+            Controls.Add(textBox2);
         }
+
 
         protected override void WndProc(ref Message m)
         {
@@ -94,16 +108,30 @@ namespace practica
         {
 
         }
+        //-----------------------------
+        //    AJUSTES SOBRE CAMPO "CARATULA"
 
+        // Para que sea siempre MAYUSCULA
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             // Para que el texto siempre sea mayuscula
-            TextBox textBox = sender as TextBox;
+            System.Windows.Forms.TextBox textBox = sender as System.Windows.Forms.TextBox;
+
             if (textBox != null)
             {
                 textBox.Text = textBox.Text.ToUpper();
                 // Coloca el cursor al final del texto para mantener la posición correcta
                 textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+        //Para impedir CARACTERES ESPECIALES
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si el caracter ingresado no es una letra
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Si no es una letra ni una tecla de control (como borrar o flechas), ignora la entrada de texto
+                e.Handled = true;
             }
         }
 
@@ -173,12 +201,13 @@ namespace practica
             // Limpiar todos los TextBox
             foreach (Control control in Controls)
             {
-                if (control is TextBox textBox)
+                if (control is System.Windows.Forms.TextBox textBox)
                 {
-                    textBox.Text = string.Empty; // reemplaza contenido por cadena vacia
+                    textBox.Text = string.Empty; // reemplaza contenido por cadena vacía
                 }
+
                 // Limpiar todos los ComboBox
-                if (control is ComboBox comboBox)
+                if (control is System.Windows.Forms.ComboBox comboBox)
                 {
                     comboBox.Text = string.Empty; // reemplaza contenido por cadena vacia
                 }
@@ -193,7 +222,7 @@ namespace practica
         private void dato_DENUNCIANTE_TextChanged(object sender, EventArgs e)
         {
             // Para que el texto siempre sea mayuscula
-            TextBox textBox = sender as TextBox;
+            System.Windows.Forms.TextBox textBox = sender as System.Windows.Forms.TextBox;
             if (textBox != null)
             {
                 textBox.Text = textBox.Text.ToUpper();
@@ -201,11 +230,21 @@ namespace practica
                 textBox.SelectionStart = textBox.Text.Length;
             }
         }
+        private void dato_DENUNCIANTE_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si el caracter ingresado no es una letra
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Si no es una letra ni una tecla de control (como borrar o flechas), ignora la entrada de texto
+                e.Handled = true;
+            }
+        }
+
 
         private void dato_IMPUTADO_TextChanged(object sender, EventArgs e)
         {
             // Para que el texto siempre sea mayuscula
-            TextBox textBox = sender as TextBox;
+            System.Windows.Forms.TextBox textBox = sender as System.Windows.Forms.TextBox;
             if (textBox != null)
             {
                 textBox.Text = textBox.Text.ToUpper();
@@ -213,5 +252,15 @@ namespace practica
                 textBox.SelectionStart = textBox.Text.Length;
             }
         }
+        private void dato_IMPUTADO_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si el caracter ingresado no es una letra
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Si no es una letra ni una tecla de control (como borrar o flechas), ignora la entrada de texto
+                e.Handled = true;
+            }
+        }
+
     }
 }
